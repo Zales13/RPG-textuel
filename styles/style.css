@@ -48,7 +48,7 @@ body {
   top:6px;
   
 }
-#circle {
+#cercle {
   height:40px;
   width:40px;
   background:transparent;
@@ -61,14 +61,14 @@ body {
   
 }
 
-#exit:hover {
+#Fermer:hover {
   background:#7A0000;
   
 }
 
 
 
-#allthethings {
+#Menu {
   width:0px;
   height:0px;
   
@@ -145,7 +145,7 @@ body {
   
 }
 
-#left {
+#gauche {
   height:100px;
     width:600px;
   background:orange;
@@ -158,7 +158,7 @@ body {
   border-top:1px solid white;
   
 }
-#right {
+#droite {
   height:100px;
   width:600px;
   background:orange;
