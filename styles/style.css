@@ -88,7 +88,7 @@ body {
   
 }
 
-#nouvellepartie {
+#commencer {
   
   position:relative;
   bottom:330px;
@@ -110,7 +110,7 @@ body {
   
 }
 
-#nouvellepartie:hover {
+#commencer:hover {
   background:#7A0000;
   color:white;
 -webkit-transform:rotate(-1deg);
@@ -119,31 +119,14 @@ body {
   
 }
 
-#charger:hover {
-  background:#7A0000;
-  color:white;
-   
-  -webkit-transform:rotate(-2deg);
-  transform:rotate(-2deg);
+#commencer p {
+  position:relative;
+  top:2px;
+  right:4px;
   
   
 }
 
-#credits:hover {
-  background:#7A0000;
-  color:white;
-  -webkit-transform:rotate(-2deg);
-  transform:rotate(-2deg);
-  
-}
-
-#options:hover {
-  background:#7A0000;
-  color:white;
-  -webkit-transform:rotate(-2deg);
-  transform:rotate(-2deg);
-  
-}
 
 #gauche {
   height:100px;
@@ -174,62 +157,4 @@ body {
 }
 
 
-
-#nouvellepartie p {
-  position:relative;
-  top:2px;
-  right:4px;
-  
-  
-}
-
-#charger {
-  height:50px;
-  width:500px;
-  background:#006680;
-  position:relative;
-  bottom:345px;
-  right:240px;
-  text-align:center;
-  font-size:30px;
-  font-family:shadows into light;
-  color:orange;
-   -webkit-transition:0.5s;
-  transition:0.5s;
-  cursor:pointer;
-  
-   
-  
-}
-#charger p {
-  position:relative;
-  top:0px;
-  right:9px;
-  
-}
-
-#options {
-  
-  height:50px;
-  width:400px;
-  background:#006680;
-  position:relative;
-  bottom:360px;
-  right:200px;
-  font-size:30px;
-  text-align:center;
-  font-family:shadows into light;
-  color:orange;
-   -webkit-transition:0.5s;
-  transition:0.5s;
-  cursor:pointer;
-  
-}
-
-#options p {
-  position:relative;
-  top:0px;
-  right:4px;
-  
-}
 

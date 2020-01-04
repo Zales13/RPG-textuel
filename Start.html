@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>&nbsp;&nbsp;<img id="myImage" onclick="changeImage()" src="http://www.noonco.com/rc/java_art/picture_doorway.jpg" width="200" height="150">
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RPG TEXTUEL</p>
+<ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick="maFonction01()">Nord</button>
+</p>
+<p>&nbsp;&nbsp;
+<button onclick="maFonction02()">Ouest</button>
+<button onclick="maFonction03()">Est</button>
+</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick="maFonction04()">Sud</button>
+</p>
+</ul>
+<p id="jeu"></p>
+
+<script>
+
+let Nord=0;
+let Sud=0;
+let Est=0;
+let Ouest=0;
+let troll=0;
+let score=0;
+let Chance=1;
+let position = "Central Room";
+let worldsize=3;
+
+ 
+
+function maFonction01() {
+if (Nord > worldsize){
+return;
+}
+if (Sud < 1) {
+        Nord = Nord + 1;
+}else {
+        Sud = Sud - 1;
+}
+myposition();
+        document.getElementById("jeu").innerHTML =
+        "Nord: " + Nord +"   Sud: " + Sud+"   Est: " + Est + "   Ouest: " + Ouest + "<br>" + "Location: " + position + "<br>" + "Score: " + score;
+}
+
+ 
+
+function maFonction02() {
+if (Ouest > worldsize){
+return;
+}
+if (Est < 1) {
+        Ouest = Ouest + 1;
+}else{
+        Est = Est - 1;
+}
+myposition();
+        document.getElementById("jeu").innerHTML =
+        "Nord: " + Nord +"   Sud: " + Sud+"   Est: " + Est + "   Ouest: " + Ouest + "<br>" + "Location: " + position + "<br>" + "Score: " + score;
+}
+
+function maFonction03() {
+
+if (Est > worldsize){
+return;
+}
+if (Ouest < 1) {
+        Est = Est + 1;
+}else{
+        Ouest = Ouest - 1;
+}
+myposition();
+        document.getElementById("jeu").innerHTML =
+        "Nord: " + Nord +"   Sud: " + Sud+"   Est: " + Est + "   Ouest: " + Ouest + "<br>" + "Location: " + position + "<br>" + "Score: " + score;
+}
+
+ 
+
+function maFonction04() {
+if (Sud > worldsize){
+return;
+}
+if (Nord > 0) {
+        Nord = Nord - 1;
+}else{
+  Sud = Sud + 1;
+}
+myposition();
+        document.getElementById("jeu").innerHTML =
+        "Nord: " + Nord +"   Sud: " + Sud+"   Est: " + Est + "   Ouest: " + Ouest + "<br>" + "Location: " + position + "<br>" + "Score: " + score;
+}
+
+
+function myposition() {
+let image = document.getElementById('myImage');
+
+troll = Math.floor((Math.random() * 25) + 1);
+if (troll == 11){
+position = "The Troll Wins!  Try Again!";
+score = 0;
+image.src = "http://www.noonco.com/rc/java_art/troll_01.jpg";
+return;
+}else{
+score = score + troll;}
+
+if (score >1000 && luck == 1){
+position = "You Win!  But, keep clicking if you want to press your luck!";
+luck = 2;
+image.src = "http://www.noonco.com/rc/java_art/win.jpg";
+return;}
+
+
+if (Nord == 3 && Ouest == 3){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_01.jpg";
+}
+else if (Nord == 3 && Ouest == 2){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_02.jpg";
+}
+else if (Nord == 3 && Ouest == 1){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_03.jpg";
+}
+else if (Nord == 3 && Est == 1){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_04.jpg";
+}
+
+else if (Nord == 3 && Est == 2){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_05.jpg";
+}
+else if (Nord == 3 && Est == 3){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_06.jpg";
+}
+
+//
+
+else if (Nord == 2 && Ouest == 3){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_07.jpg";
+}
+else if (Nord == 2 && Ouest == 2){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_08.jpg";
+}
+else if (Nord == 2 && Ouest == 1){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_09.jpg";
+}
+else if (Nord == 2 && Est == 1){
+position = "Cat Freak Out!";
+ image.src = "http://www.noonco.com/rc/java_art/cat_10.jpg";
+}
+else if (Nord == 2 && Est == 2){
+position = "Cat Freak Out!";
+ image.src = "http://www.noonco.com/rc/java_art/cat_11.jpg";
+}
+else if (Nord == 2 && Est == 3){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_12.jpg";
+}
+
+ 
+
+//
+
+else if (Nord == 1 && Ouest == 3){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_13.jpg";
+
+}
+
+else if (Nord == 1 && Ouest == 2){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_14.jpg";
+}
+else if (Nord == 1 && Ouest == 1){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_15.jpg";
+}
+else if (Nord == 1 && Est == 1){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_16.jpg";
+}
+else if (Nord == 1 && Est == 2){
+position = "Cat Freak Out!";
+ image.src = "http://www.noonco.com/rc/java_art/cat_17.jpg";
+}
+
+else if (Nord == 1 && Est == 3){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_18.jpg";
+}
+
+ 
+
+//
+
+else if (Sud == 1 && Ouest == 3){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_19.jpg";
+}
+else if (Sud == 1 && Ouest == 2){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_20.jpg";
+}
+else if (Sud == 1 && Ouest == 1){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_21.jpg";
+}
+else if (Sud == 1 && Est == 1){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_22.jpg";
+}
+else if (Sud == 1 && Est == 2){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_23.jpg";
+}
+else if (Sud == 1 && Est == 3){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_24.jpg";
+}
+
+//
+
+else if (Sud == 2 && Ouest == 3){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_25.jpg";
+}
+else if (Sud == 2 && Ouest == 2){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_26.jpg";
+}
+else if (Sud == 2 && Ouest == 1){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_27.jpg";
+}
+else if (Sud == 2 && Est == 1){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_28.jpg";
+}
+
+else if (Sud == 2 && Est == 2){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_29.jpg";
+}
+else if (Sud == 2 && Est == 3){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_30.jpg";
+}
+
+//
+
+else if (Sud == 3 && Ouest == 3){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_31.jpg";
+}
+else if (Sud == 3 && Ouest == 2){
+position = "Cat Freak Out!";
+ image.src = "http://www.noonco.com/rc/java_art/cat_32.jpg";
+}
+else if (Sud == 3 && Ouest == 1){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_33.jpg";
+}
+else if (Sud == 3 && Est == 1){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_34.jpg";
+}
+else if (Sud == 3 && Est == 2){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_35.jpg";
+}
+else if (Sud == 3 && Est == 3){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_36.jpg";
+}
+
+//
+
+else if (Sud == 0 && Ouest == 3){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_37.jpg";
+}
+else if (Sud == 0 && Ouest == 2){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_38.jpg";
+}
+else if (Sud == 0 && Ouest == 1){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_39.jpg";
+}
+else if (Sud == 0 && Est == 1){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_40.jpg";
+}
+else if (Ouest == 0 && Est == 2){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_41.jpg";
+}
+else if (Ouest == 0 && Est == 3){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_42.jpg";
+}
+
+//
+
+else if (Ouest == 0 && Nord == 3){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_43.jpg";
+}
+else if (Ouest == 0 && Nord == 2){
+position = "Cat Freak Out!";
+ image.src = "http://www.noonco.com/rc/java_art/cat_44.jpg";
+}
+else if (Ouest == 0 && Nord == 1){
+position = "Cat Freak Out!";
+ image.src = "http://www.noonco.com/rc/java_art/cat_45.jpg";
+}
+else if (Ouest == 0 && Sud == 1){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_46.jpg";
+}
+else if (Ouest == 0 && Sud == 2){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_47.jpg";
+}
+else if (Ouest == 0 && Sud == 3){
+position = "Cat Freak Out!";
+ image.src = "http://www.noonco.com/rc/java_art/cat_48.jpg";
+}
+else if (Ouest == 0 && Nord == 0 && Est == 0 && Sud == 0){
+position = "Cat Freak Out!";
+    image.src = "http://www.noonco.com/rc/java_art/picture_doorway.jpg";
+}
+else{
+position = "lost";
+image.src = "http://www.noonco.com/rc/java_art/picture_field.jpg";
+}
+}
+</script>
+</body>
+</html>
