@@ -7,12 +7,12 @@
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RPG TEXTUEL</p>
 <ul>
-   <span style="font-size:12pt;">Bienvenue au village, vous êtes sur une grille de 7 X 7 peuplée de chats, et un troll en mouvement!
+   <span style="font-size:12pt;">Bienvenue au village, vous êtes sur une grille de 7 X 7 peuplée de chats, et d'un titan en mouvement !
     Vous pouvez vous déplacer vers l'est, l'ouest, le nord et le sud. <br>
-     Si vous voyez un chat, votre score augmente, mais si vous voyez un Troll, vous perdez tout !
-    Plus le troll se rapproche de vous, plus vous obtiendrez de points pour votre prochain mouvement.<br>
+     Si vous voyez un chat, votre score augmente, mais si vous voyez un Titan, vous perdez tout !
+    Plus le titan se rapproche de vous, plus vous obtiendrez de points pour votre prochain mouvement.<br>
     Alors, essayez de deviner où il est et restez à 1 pas !
-    Si votre score est de 1000, vous gagnez ! 
+    Si votre score est de 500, vous gagnez ! 
     Mais vous pouvez alors "vous appuyer sur la chance" et essayer d'en savoir plus ...</span>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <button onclick="maFonction01()">Nord</button>
@@ -34,7 +34,7 @@ let Nord=0;
 let Sud=0;
 let Est=0;
 let Ouest=0;
-let troll=0;
+let Titan=0;
 let score=0;
 let Chance=1;
 let position = "Central Room";
@@ -107,19 +107,19 @@ myposition();
 function myposition() {
 let image = document.getElementById('mesImages');
 
-troll = Math.floor((Math.random() * 25) + 1);
-if (troll == 11){
-position = "The Troll Wins!  Try Again!";
+Titan = Math.floor((Math.random() * 25) + 1);
+if (Titan == 11){
+position = "Le Titan vous a trouvé !  Essayez encore !";
 score = 0;
-image.src = "http://www.noonco.com/rc/java_art/troll_01.jpg";
+image.src = "img/titansouriant.jpg";
 return;
 }else{
-score = score + troll;}
+score = score + Titan;}
 
-if (score >1000 && luck == 1){
-position = "You Win!  But, keep clicking if you want to press your luck!";
-luck = 2;
-image.src = "http://www.noonco.com/rc/java_art/win.jpg";
+if (score >500 && Chance == 1){
+position = "GG !  Vous pouvez continuer a jouer si vous voulez augmenter votre chance !";
+Chance = 2;
+image.src = "img/nosl.jpg";
 return;}
 
 
@@ -350,7 +350,7 @@ position = "Cat Freak Out!";
     image.src = "http://www.noonco.com/rc/java_art/picture_doorway.jpg";
 }
 else{
-position = "Vous êtes perdue";
+position = "Vous vous êtes perdue";
 image.src = "img/perdue.jpg";
 }
 }
