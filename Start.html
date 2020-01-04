@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <body>
-<p>&nbsp;&nbsp;<img id="myImage" onclick="changeImage()" src="http://www.noonco.com/rc/java_art/picture_doorway.jpg" width="200" height="150">
-</p>
+<p>&nbsp;&nbsp;<img id="mesImages" onclick="changeImage()" src="img/Village.jpg" width="250" height="200">
+</p> 
+
+
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RPG TEXTUEL</p>
 <ul>
+   <span style="font-size:12pt;">Bienvenue au village, vous êtes sur une grille de 7 X 7 peuplée de chats, et un troll en mouvement!
+    Vous pouvez vous déplacer vers l'est, l'ouest, le nord et le sud. <br>
+     Si vous voyez un chat, votre score augmente, mais si vous voyez un Troll, vous perdez tout !
+    Plus le troll se rapproche de vous, plus vous obtiendrez de points pour votre prochain mouvement.<br>
+    Alors, essayez de deviner où il est et restez à 1 pas !
+    Si votre score est de 1000, vous gagnez ! 
+    Mais vous pouvez alors "vous appuyer sur la chance" et essayer d'en savoir plus ...</span>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <button onclick="maFonction01()">Nord</button>
 </p>
@@ -15,6 +24,7 @@
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <button onclick="maFonction04()">Sud</button>
 </p>
+
 </ul>
 <p id="jeu"></p>
 
@@ -28,12 +38,12 @@ let troll=0;
 let score=0;
 let Chance=1;
 let position = "Central Room";
-let worldsize=3;
+let mondetaille=3;
 
  
 
 function maFonction01() {
-if (Nord > worldsize){
+if (Nord > mondetaille){
 return;
 }
 if (Sud < 1) {
@@ -43,13 +53,13 @@ if (Sud < 1) {
 }
 myposition();
         document.getElementById("jeu").innerHTML =
-        "Nord: " + Nord +"   Sud: " + Sud+"   Est: " + Est + "   Ouest: " + Ouest + "<br>" + "Location: " + position + "<br>" + "Score: " + score;
+        "Nord: " + Nord +"   Sud: " + Sud+"   Est: " + Est + "   Ouest: " + Ouest + "<br>" + "Localisation: " + position + "<br>" + "Score: " + score;
 }
 
  
 
 function maFonction02() {
-if (Ouest > worldsize){
+if (Ouest > mondetaille){
 return;
 }
 if (Est < 1) {
@@ -59,12 +69,12 @@ if (Est < 1) {
 }
 myposition();
         document.getElementById("jeu").innerHTML =
-        "Nord: " + Nord +"   Sud: " + Sud+"   Est: " + Est + "   Ouest: " + Ouest + "<br>" + "Location: " + position + "<br>" + "Score: " + score;
+        "Nord: " + Nord +"   Sud: " + Sud+"   Est: " + Est + "   Ouest: " + Ouest + "<br>" + "Localisation: " + position + "<br>" + "Score: " + score;
 }
 
 function maFonction03() {
 
-if (Est > worldsize){
+if (Est > mondetaille){
 return;
 }
 if (Ouest < 1) {
@@ -74,13 +84,13 @@ if (Ouest < 1) {
 }
 myposition();
         document.getElementById("jeu").innerHTML =
-        "Nord: " + Nord +"   Sud: " + Sud+"   Est: " + Est + "   Ouest: " + Ouest + "<br>" + "Location: " + position + "<br>" + "Score: " + score;
+        "Nord: " + Nord +"   Sud: " + Sud+"   Est: " + Est + "   Ouest: " + Ouest + "<br>" + "Localisation: " + position + "<br>" + "Score: " + score;
 }
 
  
 
 function maFonction04() {
-if (Sud > worldsize){
+if (Sud > mondetaille){
 return;
 }
 if (Nord > 0) {
@@ -90,12 +100,12 @@ if (Nord > 0) {
 }
 myposition();
         document.getElementById("jeu").innerHTML =
-        "Nord: " + Nord +"   Sud: " + Sud+"   Est: " + Est + "   Ouest: " + Ouest + "<br>" + "Location: " + position + "<br>" + "Score: " + score;
+        "Nord: " + Nord +"   Sud: " + Sud+"   Est: " + Est + "   Ouest: " + Ouest + "<br>" + "Localisation: " + position + "<br>" + "Score: " + score;
 }
 
 
 function myposition() {
-let image = document.getElementById('myImage');
+let image = document.getElementById('mesImages');
 
 troll = Math.floor((Math.random() * 25) + 1);
 if (troll == 11){
@@ -340,8 +350,8 @@ position = "Cat Freak Out!";
     image.src = "http://www.noonco.com/rc/java_art/picture_doorway.jpg";
 }
 else{
-position = "lost";
-image.src = "http://www.noonco.com/rc/java_art/picture_field.jpg";
+position = "Vous êtes perdue";
+image.src = "img/perdue.jpg";
 }
 }
 </script>
