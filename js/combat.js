@@ -4,7 +4,7 @@
     
     }
 
-    let  mechant = {
+    let  titan = {
             vie: 100,
             force: 30
 
@@ -17,26 +17,26 @@
          let boutonrecommencer = document.getElementById('bouton-recommencer');
 
          let heroFrapper = facileFrapper(hero.force);
-         mechant.vie -= heroFrapper;
+         titan.vie -= heroFrapper;
          printToScreen();
 
-         if (jeuterminé(mechant.vie)) {
-                jeufinis('Le heros remporte le combat')
+         if (jeuterminé(titan.vie)) {
+                jeufinis('Vous remportez le combat')
                 return;
 
          }
          
          boutonattaquer.disabled = true;
-         messagejeu.innerText = "Ennemi attaque ! "
+        messagejeu.innerText = "le titan attaque ! "
 
          setTimeout(() => {
              
-            let mechantFrapper = facileFrapper(mechant.force);
-            hero.vie -= mechantFrapper;
+            let titanFrapper = facileFrapper(titan.force);
+            hero.vie -= titanFrapper;
             printToScreen();
 
             if (jeuterminé(hero.vie)) {
-                jeufinis('Le mechant remporte le combat')
+                jeufinis('Le titan remporte le combat')
                 return;
     
             }
@@ -74,7 +74,7 @@
      
        let boutonattaquer = document.getElementById('bouton-attaquer');
        hero.vie = 100;
-       mechant.vie = 100;
+       titan.vie = 100;
     document.getElementById('message-jeu').innerText = "";
     boutonattaquer.disabled = false;
     document.getElementById('bouton-recommencer').hidden = true;
@@ -86,7 +86,7 @@
 
     const printToScreen = () => {
 
-        document.getElementById('vie-mechant').innerText = mechant.vie;
+        document.getElementById('vie-titan').innerText = titan.vie;
         document.getElementById('vie-hero').innerText = hero.vie;
         
 

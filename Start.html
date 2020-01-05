@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <body>
-<p>&nbsp;&nbsp;<img id="mesImages" onclick="changeImage()" src="img/Village.jpg" width="250" height="200">
+<p>&nbsp;&nbsp;<img id="mesImages" onclick="changeImage()" src="img/Village.jpg" width="350" height="200">
 </p> 
 
 
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RPG TEXTUEL</p>
 <ul>
-   <span style="font-size:12pt;">Bienvenue au village, vous êtes sur une grille de 7 X 7 peuplée de chats, et d'un titan en mouvement !
+   <span style="font-size:12pt;">Bienvenue au village, vous êtes sur une grille de 7 X 7 rempli de memes, et d'un titan en mouvement !
     Vous pouvez vous déplacer vers l'est, l'ouest, le nord et le sud. <br>
-     Si vous voyez un chat, votre score augmente, mais si vous voyez un Titan, vous perdez tout !
+     Si vous voyez un meme, votre score augmente, mais si vous voyez un Titan, combattez le mais si vous perdez, vous perdrez tout !
     Plus le titan se rapproche de vous, plus vous obtiendrez de points pour votre prochain mouvement.<br>
     Alors, essayez de deviner où il est et restez à 1 pas !
     Si votre score est de 500, vous gagnez ! 
@@ -25,6 +25,8 @@
 <button onclick="maFonction04()">Sud</button>
 </p>
 
+
+
 </ul>
 <p id="jeu"></p>
 
@@ -37,7 +39,7 @@ let Ouest=0;
 let Titan=0;
 let score=0;
 let Chance=1;
-let position = "Central Room";
+let position;
 let mondetaille=3;
 
  
@@ -109,7 +111,7 @@ let image = document.getElementById('mesImages');
 
 Titan = Math.floor((Math.random() * 25) + 1);
 if (Titan == 11){
-position = "Le Titan vous a trouvé !  Essayez encore !";
+position = "Le Titan vous a trouvé !";
 score = 0;
 image.src = "img/titansouriant.jpg";
 return;
@@ -124,56 +126,56 @@ return;}
 
 
 if (Nord == 3 && Ouest == 3){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_01.jpg";
+position = "YATENGAKI";
+image.src = "img/risitas.png";
 }
 else if (Nord == 3 && Ouest == 2){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_02.jpg";
+position = "BOB";
+image.src = "img/bobby.png";
 }
 else if (Nord == 3 && Ouest == 1){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_03.jpg";
+position = "Stresse pas";
+image.src = "img/stresse.png";
 }
 else if (Nord == 3 && Est == 1){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_04.jpg";
+position = "SINGE";
+image.src = "img/risidonk.png";
 }
 
 else if (Nord == 3 && Est == 2){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_05.jpg";
+position = "BOB RAZOWSKI";
+image.src = "img/bobee.png";
 }
 else if (Nord == 3 && Est == 3){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_06.jpg";
+position = "OUI";
+image.src = "img/toilet.png";
 }
 
 //
 
 else if (Nord == 2 && Ouest == 3){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_07.jpg";
+position = "I'm watching you";
+image.src = "img/regarde.jpg";
 }
 else if (Nord == 2 && Ouest == 2){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_08.jpg";
+position = "ONE PUUUUUNCH";
+image.src = "img/punch.jpg";
 }
 else if (Nord == 2 && Ouest == 1){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_09.jpg";
+position = "Wake the f up samurai ";
+image.src = "img/risireeves.jpg";
 }
 else if (Nord == 2 && Est == 1){
-position = "Cat Freak Out!";
- image.src = "http://www.noonco.com/rc/java_art/cat_10.jpg";
+position = "Triste ";
+ image.src = "img/kairi.jpg";
 }
 else if (Nord == 2 && Est == 2){
-position = "Cat Freak Out!";
- image.src = "http://www.noonco.com/rc/java_art/cat_11.jpg";
+position = "GOOD MOOOORNING AHAH ";
+ image.src = "img/spicy.jpg";
 }
 else if (Nord == 2 && Est == 3){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_12.jpg";
+position = "Bisouuuu";
+image.src = "img/bisou.jpg";
 }
 
  
@@ -181,173 +183,172 @@ image.src = "http://www.noonco.com/rc/java_art/cat_12.jpg";
 //
 
 else if (Nord == 1 && Ouest == 3){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_13.jpg";
+position = "PTDR ";
+image.src = "img/kairi2.jpg";
 
 }
 
 else if (Nord == 1 && Ouest == 2){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_14.jpg";
+position = "On voit pas bien";
+image.src = "img/voir.jpg";
 }
 else if (Nord == 1 && Ouest == 1){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_15.jpg";
+position = "Choco";
+image.src = "img/choco.jpg";
 }
 else if (Nord == 1 && Est == 1){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_16.jpg";
+position = "Bonne nuit";
+image.src = "img/dodo.png";
 }
 else if (Nord == 1 && Est == 2){
-position = "Cat Freak Out!";
- image.src = "http://www.noonco.com/rc/java_art/cat_17.jpg";
+position = "Doucement avec cet enfant";
+ image.src = "img/leo.jpg";
 }
 
 else if (Nord == 1 && Est == 3){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_18.jpg";
+position = "Attention a pas tomber";
+image.src = "img/pain.jpg";
 }
 
  
-
 //
 
 else if (Sud == 1 && Ouest == 3){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_19.jpg";
+position = "DING DONG";
+image.src = "img/mixed.jpg";
 }
 else if (Sud == 1 && Ouest == 2){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_20.jpg";
+position = "J'espere que cela va pas me penaliser";
+image.src = "img/alk.jpg";
 }
 else if (Sud == 1 && Ouest == 1){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_21.jpg";
+position = "C'etait sur en fait";
+image.src = "img/sardo.jpg";
 }
 else if (Sud == 1 && Est == 1){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_22.jpg";
+position = "Pathetic !";
+image.src = "img/bob.jpg";
 }
 else if (Sud == 1 && Est == 2){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_23.jpg";
+position = "Plus beau de tout les rebeux ";
+image.src = "img/Arouf.jpg";
 }
 else if (Sud == 1 && Est == 3){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_24.jpg";
+position = "Intelligent";
+image.src = "img/intelligence.jpg";
 }
 
 //
 
 else if (Sud == 2 && Ouest == 3){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_25.jpg";
+position = "Issou";
+image.src = "img/risitas2.png";
 }
 else if (Sud == 2 && Ouest == 2){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_26.jpg";
+position = "Nice ";
+image.src = "img/nice.jpg";
 }
 else if (Sud == 2 && Ouest == 1){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_27.jpg";
+position = "Congratulation";
+image.src = "img/comedy.jpg";
 }
 else if (Sud == 2 && Est == 1){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_28.jpg";
+position = "Un classique";
+image.src = "img/honteux.png";
 }
 
 else if (Sud == 2 && Est == 2){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_29.jpg";
+position = "Press f to pay respect";
+image.src = "img/pressf.jpg";
 }
 else if (Sud == 2 && Est == 3){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_30.jpg";
+position = "yes.";
+image.src = "img/risipompier.jpg";
 }
 
 //
 
 else if (Sud == 3 && Ouest == 3){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_31.jpg";
+position = "GOT EEEM";
+image.src = "img/gotit.jpg";
 }
 else if (Sud == 3 && Ouest == 2){
-position = "Cat Freak Out!";
- image.src = "http://www.noonco.com/rc/java_art/cat_32.jpg";
+position = "Rip";
+ image.src = "img/Nig.jpg";
 }
 else if (Sud == 3 && Ouest == 1){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_33.jpg";
+position = "Quand je vois des gens qui ecrivent au final au lieu de finalement ";
+image.src = "img/jave.jpg";
 }
 else if (Sud == 3 && Est == 1){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_34.jpg";
+position = "LA ZONE";
+image.src = "img/jul.jpg";
 }
 else if (Sud == 3 && Est == 2){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_35.jpg";
+position = "classique aussi ";
+image.src = "img/iridocyclitis.png";
 }
 else if (Sud == 3 && Est == 3){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_36.jpg";
+position = "Oups";
+image.src = "img/burgerjpg.jpg";
 }
 
 //
 
 else if (Sud == 0 && Ouest == 3){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_37.jpg";
+position = "BOOOI";
+image.src = "img/boi.jpg";
 }
 else if (Sud == 0 && Ouest == 2){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_38.jpg";
+position = "AAAAAAAAAH";
+image.src = "img/badland.jpg";
 }
 else if (Sud == 0 && Ouest == 1){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_39.jpg";
+position = "deviendre";
+image.src = "img/image0.jpg";
 }
 else if (Sud == 0 && Est == 1){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_40.jpg";
+position = "Le BoB SeCrEt ";
+image.src = "img/woW.jpg";
 }
 else if (Ouest == 0 && Est == 2){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_41.jpg";
+position = "Alors ?";
+image.src = "img/imagee.jpg";
 }
 else if (Ouest == 0 && Est == 3){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_42.jpg";
+position = "Damn";
+image.src = "img/helico.jpg";
 }
 
 //
 
 else if (Ouest == 0 && Nord == 3){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_43.jpg";
+position = "Il va nous sauver";
+image.src = "img/goku.jpg";
 }
 else if (Ouest == 0 && Nord == 2){
-position = "Cat Freak Out!";
- image.src = "http://www.noonco.com/rc/java_art/cat_44.jpg";
+position = "J'espère que vous avez vu la série !";
+ image.src = "img/fck.jpg";
 }
 else if (Ouest == 0 && Nord == 1){
-position = "Cat Freak Out!";
- image.src = "http://www.noonco.com/rc/java_art/cat_45.jpg";
+position = "Real fact";
+ image.src = "img/pancakes.jpg";
 }
 else if (Ouest == 0 && Sud == 1){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_46.jpg";
+position = "Oh pardon";
+image.src = "img/hulk.jpg";
 }
 else if (Ouest == 0 && Sud == 2){
-position = "Cat Freak Out!";
-image.src = "http://www.noonco.com/rc/java_art/cat_47.jpg";
+position = "hehe boi";
+image.src = "img/DK.png";
 }
 else if (Ouest == 0 && Sud == 3){
-position = "Cat Freak Out!";
- image.src = "http://www.noonco.com/rc/java_art/cat_48.jpg";
+position = "hop";
+ image.src = "img/ww3.jpg";
 }
 else if (Ouest == 0 && Nord == 0 && Est == 0 && Sud == 0){
-position = "Cat Freak Out!";
-    image.src = "http://www.noonco.com/rc/java_art/picture_doorway.jpg";
+position = "Hehe boiiii";
+    image.src = "img/heheboi.jpg";
 }
 else{
 position = "Vous vous êtes perdue";
