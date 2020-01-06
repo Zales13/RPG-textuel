@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
+        <link rel="stylesheet" type="text/css" href="styles/style.css"/>
 <body>
-<p>&nbsp;&nbsp;<img id="mesImages" onclick="changeImage()" src="img/Village.jpg" width="350" height="200">
+<p><img id="mesImages" onclick="changeImage()" src="img/Village.jpg" width="350" height="200">
 </p> 
 
-
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RPG TEXTUEL</p>
 <ul>
    <span style="font-size:12pt;">Bienvenue au village, vous êtes sur une grille de 7 X 7 rempli de memes, et d'un titan en mouvement !
     Vous pouvez vous déplacer vers l'est, l'ouest, le nord et le sud. <br>
@@ -14,6 +13,8 @@
     Alors, essayez de deviner où il est et restez à 1 pas !
     Si votre score est de 500, vous gagnez ! 
     Mais vous pouvez alors "vous appuyer sur la chance" et essayer d'en savoir plus ...</span>
+
+    
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <button onclick="maFonction01()">Nord</button>
 </p>
@@ -24,13 +25,12 @@
 <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <button onclick="maFonction04()">Sud</button>
 </p>
-
-
-
 </ul>
-<p id="jeu"></p>
 
-<script>
+
+<p id="jeu"></p>
+<script type="text/javascript">
+
 
 let Nord=0;
 let Sud=0;
@@ -144,7 +144,7 @@ image.src = "img/risidonk.png";
 
 else if (Nord == 3 && Est == 2){
 position = "BOB RAZOWSKI";
-image.src = "img/bobee.png";
+image.src = "img/bobee.jpg";
 }
 else if (Nord == 3 && Est == 3){
 position = "OUI";
@@ -351,7 +351,7 @@ position = "Hehe boiiii";
     image.src = "img/heheboi.jpg";
 }
 else{
-position = "Vous vous êtes perdue";
+position = "Vous vous êtes perdue, revenez en arriere ou bien continuer d'avancer";
 image.src = "img/perdue.jpg";
 }
 }
